@@ -40,12 +40,16 @@ class ViewController: UIViewController {
     
     //数字入力
     func inputNumber(){
+        let pmArray = NumView.text!.characters.split{ $0 == " " }.map(String.init)
         if (NumView.text=="0"||NumView.text=="Error"){
             NumView.text=""
         }
-        if NumView.text?.utf16.count >= 20 {
+        if pmArray.last!.characters.count > 20 {
         }
-        NumView.text = NumView.text?.stringByAppendingString(String(format: "%d",NumA))
+            
+        else if pmArray.last!.characters.count <= 20 {
+            NumView.text = NumView.text?.stringByAppendingString(String(format: "%d",NumA))
+        }
     }
     //計算記号入力
     func inputSymbol(){
@@ -308,7 +312,8 @@ class ViewController: UIViewController {
     @IBAction func Button00(sender: UIButton) {
         tapSound("Tock.caf")
         if NumView.text != "0" {
-            NumView.text = NumView.text?.stringByAppendingString("00")
+            NumA=00
+            inputNumber()
         }
     }
     @IBAction func ButtonRoot(sender: UIButton) {
