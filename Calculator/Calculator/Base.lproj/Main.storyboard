@@ -1205,6 +1205,7 @@
                             <constraint firstItem="RGe-FI-tuM" firstAttribute="top" secondItem="Dud-nN-lyg" secondAttribute="bottom" id="4gc-Vv-vo7"/>
                             <constraint firstItem="0wl-Xu-7u4" firstAttribute="leading" secondItem="StE-Rw-wAB" secondAttribute="trailing" id="53V-1T-fMS"/>
                             <constraint firstItem="eEv-7V-VHU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6n6-RE-Fxq"/>
+                            <constraint firstItem="Dud-nN-lyg" firstAttribute="centerX" secondItem="StE-Rw-wAB" secondAttribute="centerX" id="8dl-fQ-Fec"/>
                             <constraint firstItem="0wl-Xu-7u4" firstAttribute="trailing" secondItem="RGe-FI-tuM" secondAttribute="trailing" id="8nF-qt-kux"/>
                             <constraint firstItem="RGe-FI-tuM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9Ba-za-qhp"/>
                             <constraint firstItem="0wl-Xu-7u4" firstAttribute="baseline" secondItem="To8-4j-NKw" secondAttribute="baseline" id="9KV-sE-s2T"/>
@@ -1247,7 +1248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257" y="474"/>
+            <point key="canvasLocation" x="1158" y="427"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SYf-jb-1Y8">

@@ -16,12 +16,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NumView.numberOfLines=4
+        NumView.numberOfLines=0
         NumView.adjustsFontSizeToFitWidth = true
         Calculation.adjustsFontSizeToFitWidth = true
         Calculation.numberOfLines = 4
         Calculation.minimumScaleFactor = 0.8
-        NumView.minimumScaleFactor = 0.8
+        NumView.minimumScaleFactor = 0.3
+        NumView.sizeToFit()
         fontSizeofUIButton.titleLabel?.adjustsFontSizeToFitWidth=true
     }
     
@@ -56,6 +57,41 @@ class ViewController: UIViewController {
             NumView.text = NumView.text?.stringByAppendingString(" ")
             NumView.text = NumView.text?.stringByAppendingString("\(Symbol)")
             NumView.text = NumView.text?.stringByAppendingString(" ")
+        }
+    }
+    
+    //開きカッコ
+    func pressParenthesisStart() {
+        BoolSym=(NumView.text?.hasSuffix("\(Symbol)"))!
+        print(BoolSym)
+        if NumView.text=="0" {
+            NumView.text = " ( "
+        }
+        if NumView.text?.hasSuffix(" ( ") == true {
+        }
+        if BoolSym == true {
+            NumView.text = NumView.text?.stringByAppendingString(" ( ")
+            BoolSym=true
+        }
+    }
+    
+    //閉じカッコ
+    func pressParenthesisEnd() {
+        let FromParenthesisSt = NumView.text?.rangeOfString("( ")
+        print(FromParenthesisSt)
+        if NumView.text?.hasSuffix(" ) ") == true {
+        }
+        else if FromParenthesisSt != nil {
+            CalText = NumView.text!.substringWithRange(Range(FromParenthesisSt!.endIndex ..< NumView.text!.endIndex))
+            print("CalTextIs\(CalText)")
+            BoolSym = (NumView.text?.hasSuffix("\(CalText)"))!
+            print(BoolSym)
+        }
+        if NumView.text == "0" {
+        }
+        if BoolSym == true {
+            NumView.text = NumView.text?.stringByAppendingString(" ) ")
+            BoolSym = false
         }
     }
     
@@ -370,36 +406,11 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonParenthesisSt(sender: UIButton) {
         tapSound("Tock.caf")
-        BoolSym=(NumView.text?.hasSuffix("\(Symbol)"))!
-        print(BoolSym)
-        if NumView.text=="0" {
-            NumView.text = " ( "
-        }
-        if NumView.text?.hasSuffix(" ( ") == true {
-        }
-        if BoolSym == true {
-            NumView.text = NumView.text?.stringByAppendingString(" ( ")
-            BoolSym=true
-        }
+        pressParenthesisStart()
     }
     @IBAction func ButtonParenthesisEn(sender: UIButton) {
         tapSound("Tock.caf")
-        let FromParenthesisSt = NumView.text?.rangeOfString("( ")
-        print(FromParenthesisSt)
-        if NumView.text?.hasSuffix(" ) ") == true {
-        }
-        else if FromParenthesisSt != nil {
-            CalText = NumView.text!.substringWithRange(Range(FromParenthesisSt!.endIndex ..< NumView.text!.endIndex))
-            print("CalTextIs\(CalText)")
-            BoolSym = (NumView.text?.hasSuffix("\(CalText)"))!
-            print(BoolSym)
-        }
-        if NumView.text == "0" {
-        }
-        if BoolSym == true {
-            NumView.text = NumView.text?.stringByAppendingString(" ) ")
-            BoolSym = false
-        }
+        pressParenthesisEnd()
     }
     @IBAction func ButtonPercent(sender: UIButton) {
         tapSound("Tock.caf")
