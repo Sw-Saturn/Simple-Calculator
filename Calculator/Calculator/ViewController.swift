@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NumView.numberOfLines=4
+        NumView.numberOfLines=8
         NumView.adjustsFontSizeToFitWidth = true
         Calculation.adjustsFontSizeToFitWidth = true
         Calculation.numberOfLines = 4
@@ -370,7 +370,8 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonParenthesisSt(sender: UIButton) {
         tapSound("Tock.caf")
-        BoolSym=(NumView.text?.hasSuffix("\(Symbol)"))!
+        let pmArray = NumView.text!.characters.split{ $0 == " " }.map(String.init)
+        BoolSym=(pmArray.last==Symbol)
         print(BoolSym)
         if NumView.text=="0" {
             NumView.text = " ( "
@@ -386,7 +387,7 @@ class ViewController: UIViewController {
         tapSound("Tock.caf")
         let FromParenthesisSt = NumView.text?.rangeOfString("( ")
         print(FromParenthesisSt)
-        if NumView.text?.hasSuffix(" ) ") == true {
+        if NumView.text?.rangeOfString(")") != nil {
         }
         else if FromParenthesisSt != nil {
             CalText = NumView.text!.substringWithRange(Range(FromParenthesisSt!.endIndex ..< NumView.text!.endIndex))
