@@ -16,13 +16,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NumView.numberOfLines=0
-        NumView.numberOfLines=8
+        NumView.numberOfLines=3
         NumView.adjustsFontSizeToFitWidth = true
         Calculation.adjustsFontSizeToFitWidth = true
         Calculation.numberOfLines = 4
         Calculation.minimumScaleFactor = 0.8
-        NumView.minimumScaleFactor = 0.3
+        NumView.minimumScaleFactor = 0.8
         NumView.sizeToFit()
         fontSizeofUIButton.titleLabel?.adjustsFontSizeToFitWidth=true
     }
@@ -43,6 +42,8 @@ class ViewController: UIViewController {
     func inputNumber(){
         if (NumView.text=="0"||NumView.text=="Error"){
             NumView.text=""
+        }
+        if NumView.text?.utf16.count >= 20 {
         }
         NumView.text = NumView.text?.stringByAppendingString(String(format: "%d",NumA))
     }
