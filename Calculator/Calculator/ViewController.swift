@@ -16,7 +16,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         NumView.numberOfLines=0
+=======
+        NumView.numberOfLines=8
+>>>>>>> ce83284a8ed2092f08c6d40cd3d0aff89848d1ff
         NumView.adjustsFontSizeToFitWidth = true
         Calculation.adjustsFontSizeToFitWidth = true
         Calculation.numberOfLines = 4
@@ -406,11 +410,45 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonParenthesisSt(sender: UIButton) {
         tapSound("Tock.caf")
+<<<<<<< HEAD
         pressParenthesisStart()
     }
     @IBAction func ButtonParenthesisEn(sender: UIButton) {
         tapSound("Tock.caf")
         pressParenthesisEnd()
+=======
+        let pmArray = NumView.text!.characters.split{ $0 == " " }.map(String.init)
+        BoolSym=(pmArray.last==Symbol)
+        print(BoolSym)
+        if NumView.text=="0" {
+            NumView.text = " ( "
+        }
+        if NumView.text?.hasSuffix(" ( ") == true {
+        }
+        if BoolSym == true {
+            NumView.text = NumView.text?.stringByAppendingString(" ( ")
+            BoolSym=true
+        }
+    }
+    @IBAction func ButtonParenthesisEn(sender: UIButton) {
+        tapSound("Tock.caf")
+        let FromParenthesisSt = NumView.text?.rangeOfString("( ")
+        print(FromParenthesisSt)
+        if NumView.text?.rangeOfString(")") != nil {
+        }
+        else if FromParenthesisSt != nil {
+            CalText = NumView.text!.substringWithRange(Range(FromParenthesisSt!.endIndex ..< NumView.text!.endIndex))
+            print("CalTextIs\(CalText)")
+            BoolSym = (NumView.text?.hasSuffix("\(CalText)"))!
+            print(BoolSym)
+        }
+        if NumView.text == "0" {
+        }
+        if BoolSym == true {
+            NumView.text = NumView.text?.stringByAppendingString(" ) ")
+            BoolSym = false
+        }
+>>>>>>> ce83284a8ed2092f08c6d40cd3d0aff89848d1ff
     }
     @IBAction func ButtonPercent(sender: UIButton) {
         tapSound("Tock.caf")
