@@ -448,7 +448,6 @@ class ViewController: UIViewController {
             NumView.text = NumView.text?.stringByAppendingString(" ) ")
             BoolSym = false
         }
->>>>>>> ce83284a8ed2092f08c6d40cd3d0aff89848d1ff
     }
     @IBAction func ButtonPercent(sender: UIButton) {
         tapSound("Tock.caf")
