@@ -16,11 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
         NumView.numberOfLines=0
-=======
         NumView.numberOfLines=8
->>>>>>> ce83284a8ed2092f08c6d40cd3d0aff89848d1ff
         NumView.adjustsFontSizeToFitWidth = true
         Calculation.adjustsFontSizeToFitWidth = true
         Calculation.numberOfLines = 4
@@ -125,13 +122,22 @@ class ViewController: UIViewController {
             if Cal == "" {
             }
             else {
-                NumView.text = RPNCalc(Cal)
-                if NumView.text=="+∞" {
+                if RPNCalc(Cal)=="+∞" {
                     NumView.text = "Error"
                     Calculation.text=CalText.stringByAppendingString(" = ").stringByAppendingString("Error")
                 }
                 else {
-                    Calculation.text=CalText.stringByAppendingString(" = ").stringByAppendingString(RPNCalc(Cal))
+                    let Ans:Double = Double(RPNCalc(Cal))!
+                    NumView.text = String(Ans)
+                    if ((NumView.text?.hasPrefix(".0")) != nil) {
+                        NumView.text = RPNCalc(Cal)
+                        print(NumView.text)
+                        Calculation.text=CalText.stringByAppendingString(" = ").stringByAppendingString(RPNCalc(Cal))
+                    }
+                    else {
+                        print(NumView.text)
+                        Calculation.text=CalText.stringByAppendingString(" = ").stringByAppendingString(String(Ans))
+                    }
                 }
             }
             AnsCal=Calculation.text!
@@ -410,13 +416,11 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonParenthesisSt(sender: UIButton) {
         tapSound("Tock.caf")
-<<<<<<< HEAD
         pressParenthesisStart()
     }
     @IBAction func ButtonParenthesisEn(sender: UIButton) {
         tapSound("Tock.caf")
         pressParenthesisEnd()
-=======
         let pmArray = NumView.text!.characters.split{ $0 == " " }.map(String.init)
         BoolSym=(pmArray.last==Symbol)
         print(BoolSym)
@@ -428,25 +432,6 @@ class ViewController: UIViewController {
         if BoolSym == true {
             NumView.text = NumView.text?.stringByAppendingString(" ( ")
             BoolSym=true
-        }
-    }
-    @IBAction func ButtonParenthesisEn(sender: UIButton) {
-        tapSound("Tock.caf")
-        let FromParenthesisSt = NumView.text?.rangeOfString("( ")
-        print(FromParenthesisSt)
-        if NumView.text?.rangeOfString(")") != nil {
-        }
-        else if FromParenthesisSt != nil {
-            CalText = NumView.text!.substringWithRange(Range(FromParenthesisSt!.endIndex ..< NumView.text!.endIndex))
-            print("CalTextIs\(CalText)")
-            BoolSym = (NumView.text?.hasSuffix("\(CalText)"))!
-            print(BoolSym)
-        }
-        if NumView.text == "0" {
-        }
-        if BoolSym == true {
-            NumView.text = NumView.text?.stringByAppendingString(" ) ")
-            BoolSym = false
         }
     }
     @IBAction func ButtonPercent(sender: UIButton) {
