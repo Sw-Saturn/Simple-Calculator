@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B76325791D080B8400DF2822 /* ButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76325781D080B8400DF2822 /* ButtonCustom.swift */; };
 		B7AD8A4E1CE31F37000D587B /* toRPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD8A4D1CE31F37000D587B /* toRPN.swift */; };
+		B7DC19AD1D447DF500AAFD9B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DC19AC1D447DF500AAFD9B /* iAd.framework */; };
 		EBB43DEF1C852C09000F6405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB43DEE1C852C09000F6405 /* AppDelegate.swift */; };
 		EBB43DF11C852C09000F6405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB43DF01C852C09000F6405 /* ViewController.swift */; };
 		EBB43DF41C852C09000F6405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB43DF21C852C09000F6405 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		B76325781D080B8400DF2822 /* ButtonCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCustom.swift; sourceTree = "<group>"; };
 		B7AD8A4D1CE31F37000D587B /* toRPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toRPN.swift; sourceTree = "<group>"; };
+		B7DC19AC1D447DF500AAFD9B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		EBB43DEB1C852C09000F6405 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB43DEE1C852C09000F6405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB43DF01C852C09000F6405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DC19AD1D447DF500AAFD9B /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		EBB43DE21C852C09000F6405 = {
 			isa = PBXGroup;
 			children = (
+				B7DC19AC1D447DF500AAFD9B /* iAd.framework */,
 				EBB43DED1C852C09000F6405 /* Calculator */,
 				EBB43DEC1C852C09000F6405 /* Products */,
 			);
@@ -266,7 +270,7 @@
 				INFOPLIST_FILE = Calculator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.1.0.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = "kanta.1203.demizu.Simple-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -285,7 +289,7 @@
 				INFOPLIST_FILE = Calculator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.1.0.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = "kanta.1203.demizu.Simple-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = YES;

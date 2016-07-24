@@ -10,10 +10,10 @@ import UIKit
 import Foundation
 import AVFoundation
 import AudioToolbox
+import iAd
 
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController,ADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         NumView.numberOfLines=3
@@ -24,11 +24,19 @@ class ViewController: UIViewController {
         NumView.minimumScaleFactor = 0.8
         NumView.sizeToFit()
         fontSizeofUIButton.titleLabel?.adjustsFontSizeToFitWidth=true
+        self.canDisplayBannerAds=true
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    //ヘルプ画面
+    
+    @IBAction func aboutButton(sender: UIBarButtonItem) {
+        self.canDisplayBannerAds = true
     }
     
     @IBOutlet weak var NumView: UILabel!
@@ -318,13 +326,21 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonRoot(sender: UIButton) {
         tapSound("Tock.caf")
-        if Calculation.text == "Welcome." {
+        let pmArray = NumView.text!.characters.split{ $0 == " " }.map(String.init)
+        print(pmArray)
+        if pmArray.last==Symbol {
+            let alert:UIAlertController=UIAlertController(title: "Information", message: " √x ボタンは計算結果のみ使用できます", preferredStyle: UIAlertControllerStyle.Alert)
+            let defaultAction:UIAlertAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+            alert.addAction(defaultAction)
+            presentViewController(alert, animated: true, completion: nil)
+        }
+        else {
             CalText = NumView.text!
             Cal = RPNCalc(rpnconv.parseInfix(NumView.text!))
+            print("Cal=\(Cal)")
             Calculation.text = "√\(CalText) = \(String(format:"%.5g",sqrt(Double(Cal)!)))"
             NumView.text = String(format:"%.5g",sqrt(Double(Cal)!))
             AnsCal = Calculation.text!
-            
         }
     }
     @IBAction func ButtonDecimal(sender: UIButton) {
@@ -452,4 +468,5 @@ class ViewController: UIViewController {
         tapSound("Tock.caf")
         pressEqual()
     }
+   
 }

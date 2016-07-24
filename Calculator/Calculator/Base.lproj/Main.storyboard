@@ -1239,7 +1239,15 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Calculator" id="ObH-Kj-qVu"/>
+                    <navigationItem key="navigationItem" title="Calculator" id="ObH-Kj-qVu">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="cS2-jJ-JUq"/>
+                        <barButtonItem key="rightBarButtonItem" title="About" id="KrD-zU-esr">
+                            <connections>
+                                <action selector="aboutButton:" destination="BYZ-38-t0r" id="UoZ-Ij-bQf"/>
+                                <segue destination="03K-uP-bax" kind="show" id="Y91-ee-w8C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <keyCommands/>
                     <connections>
                         <outlet property="Calculation" destination="StE-Rw-wAB" id="Axp-g6-fJC"/>
@@ -1249,6 +1257,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1158" y="427"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="qcx-0W-kX6">
+            <objects>
+                <viewController id="03K-uP-bax" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MrD-0I-0AC"/>
+                        <viewControllerLayoutGuide type="bottom" id="T1h-qp-XLB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i2a-Of-LXC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Developed by Demizu." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZnQ-Ea-LLr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="img-uZ-tBm">
+                                <rect key="frame" x="0.0" y="534" width="600" height="66"/>
+                                <connections>
+                                    <outlet property="delegate" destination="03K-uP-bax" id="UtW-qg-P3n"/>
+                                </connections>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="img-uZ-tBm" firstAttribute="leading" secondItem="i2a-Of-LXC" secondAttribute="leadingMargin" constant="-20" id="DAX-iD-qCg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZnQ-Ea-LLr" secondAttribute="bottom" id="DhY-YD-PBa"/>
+                            <constraint firstItem="ZnQ-Ea-LLr" firstAttribute="top" secondItem="MrD-0I-0AC" secondAttribute="bottom" id="O6c-oq-jDp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZnQ-Ea-LLr" secondAttribute="trailing" constant="-20" id="RGa-Gd-Ehk"/>
+                            <constraint firstItem="img-uZ-tBm" firstAttribute="centerX" secondItem="i2a-Of-LXC" secondAttribute="centerX" id="ZMA-9p-eo4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="img-uZ-tBm" secondAttribute="trailing" constant="-20" id="qaU-jL-6DL"/>
+                            <constraint firstItem="ZnQ-Ea-LLr" firstAttribute="leading" secondItem="i2a-Of-LXC" secondAttribute="leadingMargin" constant="-20" id="sfY-FU-AFG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="img-uZ-tBm" secondAttribute="bottom" id="y76-a8-kR6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="fkG-01-qLD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcb-gM-rGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="425"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SYf-jb-1Y8">
