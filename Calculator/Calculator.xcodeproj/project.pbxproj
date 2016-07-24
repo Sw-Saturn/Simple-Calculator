@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75096811D448F5B00C83B56 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096801D448F5B00C83B56 /* GoogleMobileAds.framework */; };
+		B750968D1D448F8B00C83B56 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096821D448F8B00C83B56 /* AdSupport.framework */; };
+		B750968E1D448F8B00C83B56 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096831D448F8B00C83B56 /* AudioToolbox.framework */; };
+		B750968F1D448F8B00C83B56 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096841D448F8B00C83B56 /* AVFoundation.framework */; };
+		B75096901D448F8B00C83B56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096851D448F8B00C83B56 /* CoreGraphics.framework */; };
+		B75096911D448F8B00C83B56 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096861D448F8B00C83B56 /* CoreTelephony.framework */; };
+		B75096921D448F8B00C83B56 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096871D448F8B00C83B56 /* EventKit.framework */; };
+		B75096931D448F8B00C83B56 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096881D448F8B00C83B56 /* EventKitUI.framework */; };
+		B75096941D448F8B00C83B56 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75096891D448F8B00C83B56 /* MediaPlayer.framework */; };
+		B75096951D448F8B00C83B56 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B750968A1D448F8B00C83B56 /* MessageUI.framework */; };
+		B75096961D448F8B00C83B56 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B750968B1D448F8B00C83B56 /* StoreKit.framework */; };
+		B75096971D448F8B00C83B56 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B750968C1D448F8B00C83B56 /* SystemConfiguration.framework */; };
 		B76325791D080B8400DF2822 /* ButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76325781D080B8400DF2822 /* ButtonCustom.swift */; };
 		B7AD8A4E1CE31F37000D587B /* toRPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD8A4D1CE31F37000D587B /* toRPN.swift */; };
-		B7DC19AD1D447DF500AAFD9B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DC19AC1D447DF500AAFD9B /* iAd.framework */; };
 		EBB43DEF1C852C09000F6405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB43DEE1C852C09000F6405 /* AppDelegate.swift */; };
 		EBB43DF11C852C09000F6405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB43DF01C852C09000F6405 /* ViewController.swift */; };
 		EBB43DF41C852C09000F6405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB43DF21C852C09000F6405 /* Main.storyboard */; };
@@ -18,9 +29,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B75096801D448F5B00C83B56 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Calculator/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		B75096821D448F8B00C83B56 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B75096831D448F8B00C83B56 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B75096841D448F8B00C83B56 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B75096851D448F8B00C83B56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B75096861D448F8B00C83B56 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B75096871D448F8B00C83B56 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		B75096881D448F8B00C83B56 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		B75096891D448F8B00C83B56 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		B750968A1D448F8B00C83B56 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B750968B1D448F8B00C83B56 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B750968C1D448F8B00C83B56 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B76325781D080B8400DF2822 /* ButtonCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCustom.swift; sourceTree = "<group>"; };
 		B7AD8A4D1CE31F37000D587B /* toRPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toRPN.swift; sourceTree = "<group>"; };
-		B7DC19AC1D447DF500AAFD9B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		EBB43DEB1C852C09000F6405 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB43DEE1C852C09000F6405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB43DF01C852C09000F6405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +57,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7DC19AD1D447DF500AAFD9B /* iAd.framework in Frameworks */,
+				B750968D1D448F8B00C83B56 /* AdSupport.framework in Frameworks */,
+				B750968E1D448F8B00C83B56 /* AudioToolbox.framework in Frameworks */,
+				B750968F1D448F8B00C83B56 /* AVFoundation.framework in Frameworks */,
+				B75096901D448F8B00C83B56 /* CoreGraphics.framework in Frameworks */,
+				B75096911D448F8B00C83B56 /* CoreTelephony.framework in Frameworks */,
+				B75096921D448F8B00C83B56 /* EventKit.framework in Frameworks */,
+				B75096931D448F8B00C83B56 /* EventKitUI.framework in Frameworks */,
+				B75096941D448F8B00C83B56 /* MediaPlayer.framework in Frameworks */,
+				B75096951D448F8B00C83B56 /* MessageUI.framework in Frameworks */,
+				B75096961D448F8B00C83B56 /* StoreKit.framework in Frameworks */,
+				B75096971D448F8B00C83B56 /* SystemConfiguration.framework in Frameworks */,
+				B75096811D448F5B00C83B56 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +78,18 @@
 		EBB43DE21C852C09000F6405 = {
 			isa = PBXGroup;
 			children = (
-				B7DC19AC1D447DF500AAFD9B /* iAd.framework */,
+				B75096821D448F8B00C83B56 /* AdSupport.framework */,
+				B75096831D448F8B00C83B56 /* AudioToolbox.framework */,
+				B75096841D448F8B00C83B56 /* AVFoundation.framework */,
+				B75096851D448F8B00C83B56 /* CoreGraphics.framework */,
+				B75096861D448F8B00C83B56 /* CoreTelephony.framework */,
+				B75096871D448F8B00C83B56 /* EventKit.framework */,
+				B75096881D448F8B00C83B56 /* EventKitUI.framework */,
+				B75096891D448F8B00C83B56 /* MediaPlayer.framework */,
+				B750968A1D448F8B00C83B56 /* MessageUI.framework */,
+				B750968B1D448F8B00C83B56 /* StoreKit.framework */,
+				B750968C1D448F8B00C83B56 /* SystemConfiguration.framework */,
+				B75096801D448F5B00C83B56 /* GoogleMobileAds.framework */,
 				EBB43DED1C852C09000F6405 /* Calculator */,
 				EBB43DEC1C852C09000F6405 /* Products */,
 			);
@@ -267,6 +311,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Calculator",
+				);
 				INFOPLIST_FILE = Calculator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -286,6 +334,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Calculator",
+				);
 				INFOPLIST_FILE = Calculator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

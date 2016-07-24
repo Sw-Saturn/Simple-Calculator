@@ -10,10 +10,24 @@ import UIKit
 import Foundation
 import AVFoundation
 import AudioToolbox
-import iAd
+import GoogleMobileAds
 
+extension UIView {
+    func removeAllSubviews(){
+        let subviews = self.subviews
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
+    }
+}
 
-class ViewController: UIViewController,ADBannerViewDelegate {
+class ViewController: UIViewController, GADBannerViewDelegate {
+    var admobView: GADBannerView = GADBannerView()
+    let AdMobID = "ca-app-pub-3940256099942544/2934735716"
+    let TEST_DEVICE_ID = "1405b75230153994f6a6e2831cb8588d"
+    let AdMobTest:Bool = true
+    let SimulatorTest:Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NumView.numberOfLines=3
@@ -24,7 +38,7 @@ class ViewController: UIViewController,ADBannerViewDelegate {
         NumView.minimumScaleFactor = 0.8
         NumView.sizeToFit()
         fontSizeofUIButton.titleLabel?.adjustsFontSizeToFitWidth=true
-        self.canDisplayBannerAds=true
+        self.banner_ads()
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,11 +46,32 @@ class ViewController: UIViewController,ADBannerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        admobView.frame.origin = CGPointMake(0, self.view.frame.height - admobView.frame.height)
+        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+    }
     
-    //ヘルプ画面
-    
-    @IBAction func aboutButton(sender: UIBarButtonItem) {
-        self.canDisplayBannerAds = true
+    func banner_ads(){
+        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+        admobView.frame.origin = CGPointMake(0, self.view.frame.height - admobView.frame.height)
+        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+        admobView.adUnitID = AdMobID
+        admobView.delegate = self
+        admobView.rootViewController = self
+        
+        let admobRequest:GADRequest = GADRequest()
+        
+        if AdMobTest {
+            if SimulatorTest {
+                admobRequest.testDevices = [kGADSimulatorID]
+            }
+            else {
+                admobRequest.testDevices = [TEST_DEVICE_ID]
+            }
+        }
+        admobView.loadRequest(admobRequest)
+        self.view.addSubview(admobView)
     }
     
     @IBOutlet weak var NumView: UILabel!
@@ -468,5 +503,4 @@ class ViewController: UIViewController,ADBannerViewDelegate {
         tapSound("Tock.caf")
         pressEqual()
     }
-   
 }

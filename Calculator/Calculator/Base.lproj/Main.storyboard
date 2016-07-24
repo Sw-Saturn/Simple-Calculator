@@ -11,7 +11,7 @@
         <!--Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StE-Rw-wAB">
-                                <rect key="frame" x="20" y="64" width="560" height="80"/>
+                                <rect key="frame" x="20" y="64" width="560" height="67.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,15 +50,15 @@
                                 </variation>
                             </label>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RGe-FI-tuM">
-                                <rect key="frame" x="0.0" y="278" width="600" height="322"/>
+                                <rect key="frame" x="0.0" y="255" width="600" height="295"/>
                                 <subviews>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESm-df-FwT" userLabel="789">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                         <subviews>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5e-ze-LrZ" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="7"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -75,10 +75,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -97,9 +100,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7g-5b-Cny" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="150" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="8"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -116,10 +119,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -138,9 +144,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH4-Ie-Ebj" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="300" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="9"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -157,10 +163,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -179,9 +188,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSb-1d-zZx" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="450" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="450" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="÷"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -198,10 +207,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -241,12 +253,12 @@
                                         </constraints>
                                     </stackView>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vit-Dd-gBJ" userLabel="456">
-                                        <rect key="frame" x="0.0" y="54" width="600" height="54"/>
+                                        <rect key="frame" x="0.0" y="49" width="600" height="49.5"/>
                                         <subviews>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tt-yG-5wy" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="4"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -263,10 +275,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -285,9 +300,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agi-mJ-Kta" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="150" y="0.0" width="150" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -304,10 +319,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -326,9 +344,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmO-K2-6yk" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="300" y="0.0" width="150" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="6"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -345,10 +363,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -367,9 +388,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpL-lS-7Od" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="450" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="450" y="0.0" width="150" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="×"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -386,10 +407,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -429,12 +453,12 @@
                                         </constraints>
                                     </stackView>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XBv-Ea-onc" userLabel="123">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="54"/>
+                                        <rect key="frame" x="0.0" y="98.5" width="600" height="49"/>
                                         <subviews>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdl-Cx-2ct" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="1"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -451,10 +475,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -473,9 +500,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llz-Ip-pJZ" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="150" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="2"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -492,10 +519,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -514,9 +544,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1n-n8-eGi" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="300" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="3"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -533,10 +563,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -555,9 +588,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxQ-mx-9UI" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="450" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="450" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="-"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -574,10 +607,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -614,12 +650,12 @@
                                         </constraints>
                                     </stackView>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEE-Uj-oom" userLabel="0.+">
-                                        <rect key="frame" x="0.0" y="161" width="600" height="54"/>
+                                        <rect key="frame" x="0.0" y="147.5" width="600" height="49"/>
                                         <subviews>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQi-Vo-5S0" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="0"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -636,10 +672,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -658,9 +697,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ye-0G-Tbu" userLabel="00" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="150" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="00"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -677,10 +716,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -699,9 +741,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3X-cE-beD" userLabel="." customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="300" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="."/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -718,10 +760,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -740,9 +785,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkS-t9-3XL" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="450" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="450" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="+"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -759,10 +804,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -799,12 +847,12 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WUa-LZ-fHE" userLabel="()%±">
-                                        <rect key="frame" x="0.0" y="215" width="600" height="54"/>
+                                        <rect key="frame" x="0.0" y="196.5" width="600" height="49.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-9Q-DUO" userLabel="(" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
                                                 <state key="normal" title="("/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -818,10 +866,13 @@
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
@@ -840,9 +891,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkC-Bl-k1f" userLabel=")" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="150" y="0.0" width="150" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
                                                 <state key="normal" title=")"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -856,10 +907,13 @@
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
@@ -878,9 +932,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfJ-5b-a99" userLabel="%" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="300" y="0.0" width="150" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="35"/>
                                                 <state key="normal" title="%"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -894,10 +948,13 @@
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
@@ -916,9 +973,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yK-Jg-IH3" userLabel="±" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="450" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="450" y="0.0" width="150" height="49.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="35"/>
                                                 <state key="normal" title="±"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -932,10 +989,13 @@
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
@@ -956,12 +1016,12 @@
                                         </subviews>
                                     </stackView>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H02-eC-epH" userLabel="Others">
-                                        <rect key="frame" x="0.0" y="269" width="600" height="54"/>
+                                        <rect key="frame" x="0.0" y="246" width="600" height="49"/>
                                         <subviews>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6D-iy-H4H" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="C"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -978,10 +1038,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -1000,9 +1063,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDr-4a-cLB" userLabel="Delete" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="150" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="DEL"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -1019,10 +1082,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -1041,9 +1107,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlC-9u-8xu" userLabel="Root" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="300" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-2"/>
                                                 <state key="normal" title="√x"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1061,10 +1127,13 @@
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
@@ -1083,9 +1152,9 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz9-F6-ojF" customClass="Button_Custom" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="450" y="0.0" width="150" height="54"/>
+                                                <rect key="frame" x="450" y="0.0" width="150" height="49"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                                 <state key="normal" title="="/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -1099,10 +1168,13 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 </variation>
                                                 <variation key="heightClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                                 </variation>
                                                 <variation key="widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -1153,7 +1225,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Dud-nN-lyg">
-                                <rect key="frame" x="20" y="144" width="560" height="134"/>
+                                <rect key="frame" x="20" y="131.5" width="560" height="123.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1182,7 +1254,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="To8-4j-NKw">
-                                <rect key="frame" x="0.0" y="64" width="20" height="80"/>
+                                <rect key="frame" x="0.0" y="64" width="20" height="67.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1190,7 +1262,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wl-Xu-7u4">
-                                <rect key="frame" x="580" y="64" width="20" height="80"/>
+                                <rect key="frame" x="580" y="64" width="20" height="67.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1209,10 +1281,10 @@
                             <constraint firstItem="0wl-Xu-7u4" firstAttribute="trailing" secondItem="RGe-FI-tuM" secondAttribute="trailing" id="8nF-qt-kux"/>
                             <constraint firstItem="RGe-FI-tuM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9Ba-za-qhp"/>
                             <constraint firstItem="0wl-Xu-7u4" firstAttribute="baseline" secondItem="To8-4j-NKw" secondAttribute="baseline" id="9KV-sE-s2T"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RGe-FI-tuM" secondAttribute="bottom" id="Aqo-Zq-y4c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RGe-FI-tuM" secondAttribute="bottom" constant="50" id="Aqo-Zq-y4c"/>
                             <constraint firstItem="To8-4j-NKw" firstAttribute="leading" secondItem="RGe-FI-tuM" secondAttribute="leading" id="BVN-mp-USr"/>
                             <constraint firstItem="StE-Rw-wAB" firstAttribute="top" secondItem="eEv-7V-VHU" secondAttribute="top" id="Ddf-nG-Lg2"/>
-                            <constraint firstItem="RGe-FI-tuM" firstAttribute="height" secondItem="eEv-7V-VHU" secondAttribute="height" multiplier="0.6" id="GZ1-86-q24"/>
+                            <constraint firstItem="RGe-FI-tuM" firstAttribute="height" secondItem="eEv-7V-VHU" secondAttribute="height" multiplier="0.55" id="GZ1-86-q24"/>
                             <constraint firstItem="StE-Rw-wAB" firstAttribute="bottom" secondItem="To8-4j-NKw" secondAttribute="bottom" id="OEt-dF-I1E"/>
                             <constraint firstItem="To8-4j-NKw" firstAttribute="trailing" secondItem="eEv-7V-VHU" secondAttribute="trailing" id="PBQ-xc-HCm"/>
                             <constraint firstItem="0wl-Xu-7u4" firstAttribute="firstBaseline" secondItem="eEv-7V-VHU" secondAttribute="firstBaseline" id="TRc-uQ-OeY"/>
@@ -1225,7 +1297,7 @@
                             <constraint firstItem="RGe-FI-tuM" firstAttribute="top" secondItem="Dud-nN-lyg" secondAttribute="bottom" id="of5-zD-tGB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RGe-FI-tuM" secondAttribute="trailing" constant="-20" id="puH-su-LDK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dud-nN-lyg" secondAttribute="trailing" id="q8W-tc-heu"/>
-                            <constraint firstItem="Dud-nN-lyg" firstAttribute="height" secondItem="eEv-7V-VHU" secondAttribute="height" multiplier="0.25" id="rgs-1U-Q5T"/>
+                            <constraint firstItem="Dud-nN-lyg" firstAttribute="height" secondItem="eEv-7V-VHU" secondAttribute="height" multiplier="0.23" id="rgs-1U-Q5T"/>
                             <constraint firstAttribute="bottomMargin" secondItem="eEv-7V-VHU" secondAttribute="bottom" id="tIi-HR-hnL"/>
                             <constraint firstItem="eEv-7V-VHU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="teR-30-NdE"/>
                             <constraint firstItem="Dud-nN-lyg" firstAttribute="top" secondItem="StE-Rw-wAB" secondAttribute="bottom" id="vcs-Fs-epW"/>
@@ -1241,12 +1313,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Calculator" id="ObH-Kj-qVu">
                         <barButtonItem key="backBarButtonItem" title="Back" id="cS2-jJ-JUq"/>
-                        <barButtonItem key="rightBarButtonItem" title="About" id="KrD-zU-esr">
-                            <connections>
-                                <action selector="aboutButton:" destination="BYZ-38-t0r" id="UoZ-Ij-bQf"/>
-                                <segue destination="03K-uP-bax" kind="show" id="Y91-ee-w8C"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <keyCommands/>
                     <connections>
@@ -1257,49 +1323,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1158" y="427"/>
-        </scene>
-        <!--About-->
-        <scene sceneID="qcx-0W-kX6">
-            <objects>
-                <viewController id="03K-uP-bax" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MrD-0I-0AC"/>
-                        <viewControllerLayoutGuide type="bottom" id="T1h-qp-XLB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="i2a-Of-LXC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Developed by Demizu." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZnQ-Ea-LLr">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="img-uZ-tBm">
-                                <rect key="frame" x="0.0" y="534" width="600" height="66"/>
-                                <connections>
-                                    <outlet property="delegate" destination="03K-uP-bax" id="UtW-qg-P3n"/>
-                                </connections>
-                            </adBannerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="img-uZ-tBm" firstAttribute="leading" secondItem="i2a-Of-LXC" secondAttribute="leadingMargin" constant="-20" id="DAX-iD-qCg"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ZnQ-Ea-LLr" secondAttribute="bottom" id="DhY-YD-PBa"/>
-                            <constraint firstItem="ZnQ-Ea-LLr" firstAttribute="top" secondItem="MrD-0I-0AC" secondAttribute="bottom" id="O6c-oq-jDp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZnQ-Ea-LLr" secondAttribute="trailing" constant="-20" id="RGa-Gd-Ehk"/>
-                            <constraint firstItem="img-uZ-tBm" firstAttribute="centerX" secondItem="i2a-Of-LXC" secondAttribute="centerX" id="ZMA-9p-eo4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="img-uZ-tBm" secondAttribute="trailing" constant="-20" id="qaU-jL-6DL"/>
-                            <constraint firstItem="ZnQ-Ea-LLr" firstAttribute="leading" secondItem="i2a-Of-LXC" secondAttribute="leadingMargin" constant="-20" id="sfY-FU-AFG"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="img-uZ-tBm" secondAttribute="bottom" id="y76-a8-kR6"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="About" id="fkG-01-qLD"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcb-gM-rGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1788" y="425"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SYf-jb-1Y8">
@@ -1322,7 +1345,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="841-ca-dKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="474"/>
+            <point key="canvasLocation" x="488" y="384"/>
         </scene>
     </scenes>
 </document>
