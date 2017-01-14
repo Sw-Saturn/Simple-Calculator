@@ -10,24 +10,10 @@ import UIKit
 import Foundation
 import AVFoundation
 import AudioToolbox
-import GoogleMobileAds
+import iAd
 
-extension UIView {
-    func removeAllSubviews(){
-        let subviews = self.subviews
-        for subview in subviews {
-            subview.removeFromSuperview()
-        }
-    }
-}
 
-class ViewController: UIViewController, GADBannerViewDelegate {
-    var admobView: GADBannerView = GADBannerView()
-    let AdMobID = "ca-app-pub-3940256099942544/2934735716"
-    let TEST_DEVICE_ID = "1405b75230153994f6a6e2831cb8588d"
-    let AdMobTest:Bool = true
-    let SimulatorTest:Bool = true
-    
+class ViewController: UIViewController,ADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         NumView.numberOfLines=3
@@ -38,7 +24,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         NumView.minimumScaleFactor = 0.8
         NumView.sizeToFit()
         fontSizeofUIButton.titleLabel?.adjustsFontSizeToFitWidth=true
-        self.banner_ads()
+        //self.canDisplayBannerAds=true
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,34 +32,13 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        admobView.frame.origin = CGPointMake(0, self.view.frame.height - admobView.frame.height)
-        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
-    }
     
-    func banner_ads(){
-        admobView = GADBannerView(adSize:kGADAdSizeBanner)
-        admobView.frame.origin = CGPointMake(0, self.view.frame.height - admobView.frame.height)
-        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
-        admobView.adUnitID = AdMobID
-        admobView.delegate = self
-        admobView.rootViewController = self
-        
-        let admobRequest:GADRequest = GADRequest()
-        
-        if AdMobTest {
-            if SimulatorTest {
-                admobRequest.testDevices = [kGADSimulatorID]
-            }
-            else {
-                admobRequest.testDevices = [TEST_DEVICE_ID]
-            }
-        }
-        admobView.loadRequest(admobRequest)
-        self.view.addSubview(admobView)
+    //ヘルプ画面
+    /*
+    @IBAction func aboutButton(sender: UIBarButtonItem) {
+        self.canDisplayBannerAds = true
     }
-    
+    */
     @IBOutlet weak var NumView: UILabel!
     @IBOutlet weak var Calculation: UILabel!
     var Num:String="0",Symbol:String = "Null",NumA:Int = 0,NumB:Double = 0,NumC:Double = 0,Ans:Double = 0.0,AnsCal:String="",BoolSym:Bool = false,CalText:String = "",Cal:String="",appendLastNumber:String="",endPoint:Int=0
@@ -215,7 +180,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     //1文字消去
     func deleteLastNumber()  {
         if NumView.text! != "" {
-            if NumView.text?.utf16.count == 1 {
+            if NumView.text?.utf16.count == 1 || NumView.text=="("{
                 NumView.text! = "0"
             }
             else   {
@@ -503,4 +468,5 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         tapSound("Tock.caf")
         pressEqual()
     }
+   
 }
