@@ -13,19 +13,19 @@ class TestPage: UIPageViewController,UIPageViewControllerDataSource {
     let pageList = ["First","Second"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        let controller = storyboard?.instantiateViewControllerWithIdentifier(pageList.first!)
-        self.setViewControllers([controller!], direction: .Forward, animated: true, completion: nil)
+        let controller = storyboard?.instantiateViewController(withIdentifier: pageList.first!)
+        self.setViewControllers([controller!], direction: .forward, animated: true, completion: nil)
         self.dataSource=self
 
         // Do any additional setup after loading the view.
     }
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         //現在のビューコントローラーのインデックス番号を取得する。
-        let index = pageList.indexOf(viewController.restorationIdentifier!)!
+        let index = pageList.index(of: viewController.restorationIdentifier!)!
         if (index > 0) {
             //前ページのビューコントローラーを返す。
-            return storyboard!.instantiateViewControllerWithIdentifier(pageList[index-1])
+            return storyboard!.instantiateViewController(withIdentifier: pageList[index-1])
         }
         return nil
     }
@@ -33,13 +33,13 @@ class TestPage: UIPageViewController,UIPageViewControllerDataSource {
     
     
     //左ドラッグ時の呼び出しメソッド
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         //現在のビューコントローラーのインデックス番号を取得する。
-        let index = pageList.indexOf(viewController.restorationIdentifier!)!
+        let index = pageList.index(of: viewController.restorationIdentifier!)!
         if (index < pageList.count-1) {
             //次ページのビューコントローラーを返す。
-            return storyboard!.instantiateViewControllerWithIdentifier(pageList[index+1])
+            return storyboard!.instantiateViewController(withIdentifier: pageList[index+1])
         }
         return nil
     }

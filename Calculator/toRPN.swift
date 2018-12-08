@@ -16,7 +16,7 @@ class convertRPN  {
         "-": (prec: 2, rAssoc: false),
         ]
     
-    func rpn(tokens: [String]) -> [String] {
+    func rpn(_ tokens: [String]) -> [String] {
         var rpn : [String] = []
         var stack : [String] = [] // holds operators and left parenthesis
         
@@ -35,7 +35,7 @@ class convertRPN  {
                 }
             default:
                 if let o1 = opa[tok] { // token is an operator?
-                    for op in stack.reverse() {
+                    for op in stack.reversed() {
                         if let o2 = opa[op] {
                             if !(o1.prec > o2.prec || (o1.prec == o2.prec && o1.rAssoc)) {
                                 // top item is an operator that needs to come off
@@ -53,17 +53,17 @@ class convertRPN  {
             }
         }
         
-        return rpn + stack.reverse()
+        return rpn + stack.reversed()
     }
     
-    func parseInfix(e: String) -> String {
-        let tokens = e.characters.split{ $0 == " " }.map(String.init)
+    func parseInfix(_ e: String) -> String {
+        let tokens = e.split{ $0 == " " }.map(String.init)
         print("CalArrayIs\'\(tokens)\'")
         if tokens.last == "+" || tokens.last == "-" || tokens.last == "×" || tokens.last == "÷" {
             return ""
         }
         else {
-            return rpn(tokens).joinWithSeparator(" ")
+            return rpn(tokens).joined(separator: " ")
         }
     }
 }
