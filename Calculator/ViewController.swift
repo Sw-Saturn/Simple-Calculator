@@ -335,8 +335,8 @@ class ViewController: UIViewController {
         let pmArray = NumView.text!.split{ $0 == " " }.map(String.init)
         print(pmArray)
         if pmArray.last==Symbol {
-            let alert:UIAlertController=UIAlertController(title: "Information", message: " √x ボタンは計算結果のみ使用できます", preferredStyle: UIAlertControllerStyle.alert)
-            let defaultAction:UIAlertAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+            let alert:UIAlertController=UIAlertController(title: "Information", message: " √x ボタンは計算結果のみ使用できます", preferredStyle: UIAlertController.Style.alert)
+            let defaultAction:UIAlertAction=UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
             alert.addAction(defaultAction)
             present(alert, animated: true, completion: nil)
         }
